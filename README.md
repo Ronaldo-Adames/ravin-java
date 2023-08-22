@@ -1,2 +1,2 @@
-# ravin-java
+# ravin-spring-boot-java
 Projeto desenvolvido durante a disciplina de Spring Boot no curso Devs2Blu
