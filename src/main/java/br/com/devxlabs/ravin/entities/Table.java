@@ -3,6 +3,7 @@ package br.com.devxlabs.ravin.entities;
 import java.util.List;
 
 import br.com.devxlabs.ravin.enums.TableStatus;
+import jakarta.persistence.Entity;
 
 public class Table {
 

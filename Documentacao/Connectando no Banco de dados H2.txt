@@ -1,0 +1,6 @@
+acessar no endereço da porta do spring: http://localhost:8080/h2-console/
+
+username=sa
+password=
+
+JDBC URL: jdbc:h2:mem:ravin -----> pegar no arquivo aplication.properties
