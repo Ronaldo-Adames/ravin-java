@@ -1,2 +1,2 @@
 # ravin-java
-Projeto desenvolvido durante as aulas no curso Devs2Blu
+Projeto desenvolvido durante a disciplina de Spring Boot no curso Devs2Blu
