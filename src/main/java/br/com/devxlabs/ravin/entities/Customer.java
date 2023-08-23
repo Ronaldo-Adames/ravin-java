@@ -1,8 +1,15 @@
 package br.com.devxlabs.ravin.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer extends Person {
-	
-	private int customerId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String allergies;
 	private boolean vip;
 
@@ -12,17 +19,17 @@ public class Customer extends Person {
 
 	public Customer(int customerId, String allergies, boolean vip) {
 		super();
-		this.customerId = customerId;
+		this.id = customerId;
 		this.allergies = allergies;
 		this.vip = vip;
 	}
 
-	public int getCustomerId() {
-		return customerId;
+	public int getId() {
+		return id;
 	}
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getAllergies() {

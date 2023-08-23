@@ -1,23 +1,30 @@
 package br.com.devxlabs.ravin.entities;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 
+@Entity
 public class Person {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(nullable = false)
 	private String name;
-	private String address;
+	private Address address;
 	private String phone;
+	@Column(nullable = false, unique = true)
 	private String cpf;
 	private Date dateOfBirth;
 	private String observations;
+	@Column(nullable = false)
 	private boolean hasActive;
 
 	public Person() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Person(int id, String name, String address, String phone, String cpf, Date dateOfBirth, String observations,
+	public Person(int id, String name, Address address, String phone, String cpf, Date dateOfBirth, String observations,
 			boolean hasActive) {
 		super();
 		this.id = id;
@@ -46,11 +53,11 @@ public class Person {
 		this.name = name;
 	}
 
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
@@ -96,7 +103,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person \n id=" + id + ", \n name=" + name + ", \n address=" + address + ", \n phone=" + phone
+		return "Person \n id=" + id + ", \n name=" + name + ", \n address=" + address.toString() + ", \n phone=" + phone
 				+ ", \n cpf=" + cpf + ", \n dateOfBirth=" + dateOfBirth + ", \n observations=" + observations
 				+ ", \n hasActive=" + hasActive;
 	}
