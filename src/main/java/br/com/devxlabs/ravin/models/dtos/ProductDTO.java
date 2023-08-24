@@ -15,23 +15,23 @@ public class ProductDTO implements Serializable {
     private static final long serialVersionUID = 42L;
     private int id;
     @NotBlank(message = "O campo nome não pode estar em branco.")
-    @NotEmpty(message = "O campo nome não pode estar em vazio.")
+    @NotEmpty(message = "O campo nome não pode estar vazio.")
     private String name;
     @NotBlank(message = "O campo descrição não pode estar em branco.")
-    @NotEmpty(message = "O campo descrição não pode estar em vazio.")
+    @NotEmpty(message = "O campo descrição não pode estar vazio.")
     private String description;
     @NotBlank(message = "O campo código não pode estar em branco.")
-    @NotEmpty(message = "O campo código não pode estar em vazio.")
+    @NotEmpty(message = "O campo código não pode estar vazio.")
     private String code;
     @DecimalMin(value = MIN_COST_PRICE, message = "O preço de custo não pode ser negativo.")
     private double costPrice;
     @DecimalMin(value = MIN_SAlE_PRICE, message = "O preço de venda não pode ser negativo.")
     private double salePrice;
     @NotBlank(message = "O campo tempo de preparo não pode estar em branco.")
-    @NotEmpty(message = "O campo tempo de preparo não pode estar em vazio.")
+    @NotEmpty(message = "O campo tempo de preparo não pode estar vazio.")
     private String preparationTime;
     @NotBlank(message = "O campo tipo de produto não pode estar em branco.")
-    @NotEmpty(message = "O campo tipo de produto não pode estar em vazio.")
+    @NotEmpty(message = "O campo tipo de produto não pode estar vazio.")
     private ProductType productType;
     private boolean hasActive = true;
 

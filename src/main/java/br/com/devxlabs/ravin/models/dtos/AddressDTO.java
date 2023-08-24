@@ -10,16 +10,16 @@ public class AddressDTO implements Serializable {
     @Serial
     public static final long serialVersionUID = 42L;
     @NotBlank(message = "O campo estado não pode estar em branco.")
-    @NotEmpty(message = "O campo estado não pode estar em vazio.")
+    @NotEmpty(message = "O campo estado não pode estar vazio.")
     private String state;
     @NotBlank(message = "O campo cidade não pode estar em branco.")
-    @NotEmpty(message = "O campo cidade não pode estar em vazio.")
+    @NotEmpty(message = "O campo cidade não pode estar vazio.")
     private String city;
     @NotBlank(message = "O campo rua não pode estar em branco.")
-    @NotEmpty(message = "O campo rua não pode estar em vazio.")
+    @NotEmpty(message = "O campo rua não pode estar vazio.")
     private String street;
     @NotBlank(message = "O campo CEP não pode estar em branco.")
-    @NotEmpty(message = "O campo CEP não pode estar em vazio.")
+    @NotEmpty(message = "O campo CEP não pode estar vazio.")
     private String zipCode;
 
     public AddressDTO() {

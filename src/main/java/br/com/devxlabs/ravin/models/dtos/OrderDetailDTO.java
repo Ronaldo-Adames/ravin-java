@@ -22,7 +22,85 @@ public class OrderDetailDTO implements Serializable {
     private PreparationOrderStatus preparationOrderStatus;
     private String comments;
     @NotBlank(message = "O campo quantidade de produto não pode estar em branco.")
-    @NotEmpty(message = "O campo quantidade de produto não pode estar em vazio.")
+    @NotEmpty(message = "O campo quantidade de produto não pode estar vazio.")
     private int quantity;
 
+    public OrderDetailDTO() {
+
+    }
+
+    public OrderDetailDTO(int id, ProductDTO productDTO, Timestamp requestDateTime, Timestamp startPreparationDateTime, Timestamp remainingPreparationTime, PreparationOrderStatus preparationOrderStatus, String comments, int quantity) {
+        this.id = id;
+        this.productDTO = productDTO;
+        this.requestDateTime = requestDateTime;
+        this.startPreparationDateTime = startPreparationDateTime;
+        this.remainingPreparationTime = remainingPreparationTime;
+        this.preparationOrderStatus = preparationOrderStatus;
+        this.comments = comments;
+        this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ProductDTO getProductDTO() {
+        return productDTO;
+    }
+
+    public void setProductDTO(ProductDTO productDTO) {
+        this.productDTO = productDTO;
+    }
+
+    public Timestamp getRequestDateTime() {
+        return requestDateTime;
+    }
+
+    public void setRequestDateTime(Timestamp requestDateTime) {
+        this.requestDateTime = requestDateTime;
+    }
+
+    public Timestamp getStartPreparationDateTime() {
+        return startPreparationDateTime;
+    }
+
+    public void setStartPreparationDateTime(Timestamp startPreparationDateTime) {
+        this.startPreparationDateTime = startPreparationDateTime;
+    }
+
+    public Timestamp getRemainingPreparationTime() {
+        return remainingPreparationTime;
+    }
+
+    public void setRemainingPreparationTime(Timestamp remainingPreparationTime) {
+        this.remainingPreparationTime = remainingPreparationTime;
+    }
+
+    public PreparationOrderStatus getPreparationOrderStatus() {
+        return preparationOrderStatus;
+    }
+
+    public void setPreparationOrderStatus(PreparationOrderStatus preparationOrderStatus) {
+        this.preparationOrderStatus = preparationOrderStatus;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }
