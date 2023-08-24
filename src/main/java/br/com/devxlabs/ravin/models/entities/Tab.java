@@ -1,4 +1,4 @@
-package br.com.devxlabs.ravin.entities;
+package br.com.devxlabs.ravin.models.entities;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ public class Tab {
 	private int id;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "table_id")
-	private Table table;
+	private br.com.devxlabs.ravin.models.entities.Table table;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "customer_Id")// rafencia campo da classe/tabela Customer
 	private Customer customer;
@@ -28,7 +28,7 @@ public class Tab {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Tab(int id, Table table, Customer customer, List<OrderDetail> orderDetails, String code,
+	public Tab(int id, br.com.devxlabs.ravin.models.entities.Table table, Customer customer, List<OrderDetail> orderDetails, String code,
 			   String comments, TabStatus commandaStatus) {
 		super();
 		this.id = id;
@@ -48,7 +48,7 @@ public class Tab {
 		this.id = id;
 	}
 
-	public Table getTable() {
+	public br.com.devxlabs.ravin.models.entities.Table getTable() {
 		return table;
 	}
 

@@ -1,16 +1,17 @@
-package br.com.devxlabs.ravin.entities;
+package br.com.devxlabs.ravin.models.entities;
 
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
-public class Person {
+public abstract class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(nullable = false)
 	private String name;
+	@Embedded
 	private Address address;
 	private String phone;
 	@Column(nullable = false, unique = true)
@@ -25,7 +26,7 @@ public class Person {
 	}
 
 	public Person(int id, String name, Address address, String phone, String cpf, Date dateOfBirth, String observations,
-			boolean hasActive) {
+				  boolean hasActive) {
 		super();
 		this.id = id;
 		this.name = name;
