@@ -33,13 +33,14 @@ public class ProductDTO implements Serializable {
     @NotBlank(message = "O campo tipo de produto não pode estar em branco.")
     @NotEmpty(message = "O campo tipo de produto não pode estar vazio.")
     private ProductType productType;
+    private String comments;
     private boolean hasActive = true;
 
     public ProductDTO () {
 
     }
 
-    public ProductDTO(int id, String name, String description, String code, double costPrice, double salePrice, String preparationTime, ProductType productType, boolean hasActive) {
+    public ProductDTO(int id, String name, String description, String code, double costPrice, double salePrice, String preparationTime, ProductType productType, String comments, boolean hasActive) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -48,6 +49,7 @@ public class ProductDTO implements Serializable {
         this.salePrice = salePrice;
         this.preparationTime = preparationTime;
         this.productType = productType;
+        this.comments = comments;
         this.hasActive = hasActive;
     }
 
@@ -121,5 +123,13 @@ public class ProductDTO implements Serializable {
 
     public void setHasActive(boolean hasActive) {
         this.hasActive = hasActive;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 }
