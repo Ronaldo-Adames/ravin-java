@@ -30,8 +30,6 @@ public class ProductDTO implements Serializable {
     @NotBlank(message = "O campo tempo de preparo não pode estar em branco.")
     @NotEmpty(message = "O campo tempo de preparo não pode estar vazio.")
     private String preparationTime;
-    @NotBlank(message = "O campo tipo de produto não pode estar em branco.")
-    @NotEmpty(message = "O campo tipo de produto não pode estar vazio.")
     private ProductType productType;
     private String comments;
     private boolean hasActive = true;
@@ -131,5 +129,21 @@ public class ProductDTO implements Serializable {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", code='" + code + '\'' +
+                ", costPrice=" + costPrice +
+                ", salePrice=" + salePrice +
+                ", preparationTime='" + preparationTime + '\'' +
+                ", productType=" + productType +
+                ", comments='" + comments + '\'' +
+                ", hasActive=" + hasActive +
+                '}';
     }
 }

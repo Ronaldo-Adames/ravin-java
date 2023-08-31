@@ -10,7 +10,7 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto incrementável do tipo serial(int)
-	private int id;
+	private long id;
 	@Column(nullable = false)// campo obrigatório
 	private String name;
 	@Column(nullable = false)
@@ -39,7 +39,7 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(int id, String name, String description, String code, double costPrice, double salePrice,
+	public Product(long id, String name, String description, String code, double costPrice, double salePrice,
 			String preparationTime, String comments, ProductType productType, boolean hasActive, String createdBy, Date createdDate, String updatedBy, Date updatedDate) {
 		super();
 		this.id = id;
@@ -58,11 +58,11 @@ public class Product {
 		this.updatedDate = updatedDate;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
