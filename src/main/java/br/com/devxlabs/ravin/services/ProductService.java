@@ -21,6 +21,7 @@ public class ProductService {// todas as validações e regras de negócio devem
 
     public ProductDTO findById(long id) {
         Optional<Product> optional = productRepository.findById(id);
+        productRepository.save(new Product());
         return  null;
     }
 
