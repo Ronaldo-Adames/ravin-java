@@ -18,7 +18,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("SELECT p.name p.costprice, p.createDate from Product p")
     List<String> findProductNome();
 
-    @Query(value = "select name from Product where productType = :productType AND createDate = TODAY()", nativeQuery = true)
+    @Query(value = "SELECT name from Product where productType = :productType AND createDate = TODAY()", nativeQuery = true)
     List<String> findProductNamesByProductTypeInsertedToday(String productType);
 
+
+    Page<Product> findAll(Pageable pageable);
 }
